@@ -194,7 +194,27 @@ OpenCV Rule 검사, **YOLO11** 객체 검출, **ResNet-18** Fine-tuning을 거�
 
 <br/>
 
-## 🔄 How I Work — 4가지 원칙
+## 🎯 What I Do
+
+| 영역 | 해 본 것 |
+| :--- | :--- |
+| **🌿 Bio Research** | 해조류(김) 배양 · 생장 · 병해 연구, 육상양식 100배 규모 실증, 자체 배지 개발 |
+| **📏 Data · Evaluation** | 촬영 묶음 단위 Split, Test 1회 평가 규칙, Class별 P/R · 실패 유형(FN · FP · CLASS · BBOX) 분석 |
+| **👁️ Machine Vision** | OpenCV Rule 검사 (CLAHE · Sobel · Otsu), 자동 ROI, RETAKE 판정 |
+| **🤖 Deep Learning** | 객체 검출 (YOLO11), 이미지 분류 Fine-tuning (ResNet-18), Grad-CAM 근거 확인 |
+| **⚙️ Model Serving** | FastAPI · Redis 캐시 · Celery 비동기 작업 · PostgreSQL 기록 · Docker Compose |
+| **🧍 3D · Pose** | VICON 모캡 촬영 기획, 동작별 OK / NG 기준 설계 |
+| **📝 R&amp;D · Documentation** | 국책과제 제안 · KPI 관리, 라벨 기준서, 실패 분석 보고서, README |
+
+<div align="right"><a href="#top"><sub><b>↑ 맨 위로</b></sub></a></div>
+
+<br/>
+
+## 🔄 How I Work
+
+<p align="center"><img src="how-i-work.svg" width="100%" alt="End-to-End Project Flow: DEFINE 기준 → SPLIT 데이터 → BUILD 모델 → EVALUATE 평가 → SHIP 서빙, 실패 사례를 다음 기준에 반영"/></p>
+
+<sub>모델을 만들기 전에 <b>무엇을 OK / NG로 볼지</b>와 <b>데이터를 어떻게 나눌지</b>부터 정하고, 평가 후에는 <b>틀린 사진을 직접 보며</b> 찾은 원인을 다음 버전의 기준에 반영합니다.</sub>
 
 | 원칙 | 실제로 한 것 |
 | :--- | :--- |
@@ -202,8 +222,6 @@ OpenCV Rule 검사, **YOLO11** 객체 검출, **ResNet-18** Fine-tuning을 거�
 | **🔒 Test는 한 번만 본다** | Val로 고르고 Test는 1회, 코드로 막음 (`allow_test`, 덮어쓰기 금지) |
 | **📸 기준을 정한 사진으로 성능을 말하지 않는다** | 매번 새 사진(holdout · final)으로 보고 (03, 04) |
 | **⚠️ 위험한 오류부터 줄인다** | 불량을 통과시키는 NG→OK, 병을 정상으로 보는 오류를 먼저 셈 (03, 05) |
-
-<sub>판단하지 못하는 사진은 통과시키지 않고 <b>RETAKE · 보류</b>로 돌리고, Test 이후 바꾼 규칙은 <b>참고값</b>으로 따로 표시합니다.</sub>
 
 <div align="right"><a href="#top"><sub><b>↑ 맨 위로</b></sub></a></div>
 
@@ -213,22 +231,26 @@ OpenCV Rule 검사, **YOLO11** 객체 검출, **ResNet-18** Fine-tuning을 거�
 
 <div align="center">
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white) ![Hugging Face](https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black) ![YOLO11](https://img.shields.io/badge/YOLO11-111F68?style=flat-square&logo=yolo&logoColor=white) ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white) ![Hugging Face](https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black) ![YOLO11](https://img.shields.io/badge/YOLO11-111F68?style=flat-square&logo=yolo&logoColor=white) ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white) ![Celery](https://img.shields.io/badge/Celery-37814A?style=flat-square&logo=celery&logoColor=white) ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 <br/>
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white) ![Celery](https://img.shields.io/badge/Celery-37814A?style=flat-square&logo=celery&logoColor=white) ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white) ![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
+
+<sub>AI · Vision · Serving &nbsp;&nbsp;|&nbsp;&nbsp; Language · Deploy · Collaboration</sub>
 
 </div>
 
 <br/>
 
-| 분야 | 기술 | 어디서 |
-| :--- | :--- | :--- |
-| 📏 **데이터 · 평가** | `묶음 단위 Split` `pHash · md5` `mAP · P/R` `Confusion Matrix` `실패 분석 (FN · FP · CLASS · BBOX)` | 02, 05 |
-| 👁️ **머신비전** | `OpenCV` `ROI · Otsu · Morphology` `CLAHE · Sobel · Gaussian` `실루엣 · 기울기 · GrabCut · HSV` | 03, 04, 05 |
-| 🤖 **딥러닝** | `YOLO11 (Ultralytics)` `ResNet-18 Fine-tuning` `증강` `Grad-CAM` `특징 거리 OOD` | 02, 05 |
-| ⚙️ **서빙 · MLOps** | `FastAPI` `Celery` `Redis` `PostgreSQL` `Docker Compose` `pytest` `Git` | 03, 05 |
-| 🧍 **3D · 포즈** | `VICON 모캡` `YOLO Pose (예정)` | 06 |
-| 🖱️ **GUI · 좌표** | `Python GUI 좌표 변환` `YOLO TXT I/O` | 01 |
+| 분야 | 기술 |
+| :--- | :--- |
+| 🤖 **AI · Vision** | `PyTorch` `Hugging Face Transformers` `YOLO11 (Ultralytics)` `ResNet-18` `Grad-CAM` |
+| 👁️ **Machine Vision** | `OpenCV` `CLAHE` `Sobel` `Otsu` `Morphology` `GrabCut` `HSV` |
+| ⚙️ **Backend · Serving** | `FastAPI` `Celery` `Redis` `PostgreSQL` |
+| 📏 **Data · Evaluation** | `mAP · P/R` `Confusion Matrix` `pHash · md5` `Excel` |
+| 💻 **Language** | `Python` |
+| ☁️ **Deploy · Test** | `Docker` `Docker Compose` `pytest` |
+| 🧍 **3D · Pose** | `VICON` `YOLO Pose (예정)` |
+| 🤝 **Collaboration** | `Git` `GitHub` |
 
 <br/>
 
@@ -246,7 +268,7 @@ OpenCV Rule 검사, **YOLO11** 객체 검출, **ResNet-18** Fine-tuning을 거�
 
 <div align="center">
 
-[![Email](https://img.shields.io/badge/Email-1E4E63?style=flat-square&logo=gmail&logoColor=white)](mailto:[이메일])
+[![Email](https://img.shields.io/badge/Email-1E4E63?style=flat-square&logo=gmail&logoColor=white)](mailto:gksk9063@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/HanaPark-lab)
 
 </div>
