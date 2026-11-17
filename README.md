@@ -41,7 +41,7 @@ OpenCV Rule 검사, **YOLO11** 객체 검출, **ResNet-18** Fine-tuning을 거�
 
 **🌿 Bio × AI**
 
-해조류(김) 박사 · 김 육상양식 **기업부설연구소장** 출신. 생물과 현장을 아는 사람으로서 **데이터를 설계**합니다.
+해조류(김) 박사 · 김 육상양식 **연구소장** 출신. 수조 사진 **분할 AI**와 **수질 대시보드**를 직접 만들며 생물과 데이터를 이어 왔습니다.
 
 </td>
 </tr>
@@ -51,29 +51,54 @@ OpenCV Rule 검사, **YOLO11** 객체 검출, **ResNet-18** Fine-tuning을 거�
 
 ## 📊 Impact at a Glance
 
-<img src="impact.svg" width="100%" alt="김 육상양식 100배 규모 실증 · 조각김치 이물검출 Val mAP50-95 0.345→0.446 · 병뚜껑 검사 54%→90%, 위험 오류 0건 · 콩잎 병해 분류 Test 94.5%"/>
+<img src="impact.svg" width="100%" alt="김 이미지 분할 학습 데이터 191→463장 · 김 최대 성장률 4.72 mm/day · 조각김치 이물검출 Val mAP50-95 0.345→0.446 · 병뚜껑 검사 54%→90%"/>
 
-<sub>※ 모든 수치는 실제 실행 기록값입니다. 조각김치 이물검출은 6인 팀 공동 성과이며, 저는 Split · 평가 · 실패 분석을 맡았습니다. 연구소 성과는 이력서에 공개한 범위만 적었습니다.</sub>
+<sub>※ 모든 수치는 실제 실행 기록값입니다. 조각김치 이물검출은 6인 팀 공동 성과이며, 저는 Split · 평가 · 실패 분석을 맡았습니다. 연구소 성과는 공개 가능한 범위만 적었습니다.</sub>
 
 <div align="right"><a href="#top"><sub><b>↑ 맨 위로</b></sub></a></div>
 
 <br/>
 
-## 🏢 Career — R&amp;D 연구소장
+## 🏢 Career — 김 육상양식 R&amp;D 연구소장
 
-<img src="company-01.svg" width="100%" alt="R&D 김 육상양식 공정 개발 · 이미지 기반 생장 분석: 기초 실험에서 100배 규모 파일럿까지 이끌고, 김의 성장률 · 색택을 머신러닝으로 분석했습니다."/>
+<sub>주식회사 두번째바다 (에어로포닉스 기반 김 육상양식, TIPS 선정 기업) · 2025.06 ~ 2026.06 · R&amp;D팀 3명 · 공주대 생명과학 박사(SCI(E) 주저자 1편 · 공저자 5편)<br/>🔒 사내 프로젝트라 코드 · 데이터 · 사진은 공개하지 않고, 설명과 공개 가능한 수치만 적었습니다.</sub>
 
-<sub>🔒 주식회사 두번째바다 기업부설연구소 연구소장 (2025.06 ~ 2026.06). 사내 프로젝트라 코드 · 데이터는 공개하지 않습니다.</sub>
+<img src="company-01.svg" width="100%" alt="LAB 01 수중 김 이미지 분할 · 성장 예측: 학습 이미지 191장에서 463장으로 확장, DeepLabV3+ 분할과 30일 성장 곡선 예측 웹"/>
 
 <table>
-<tr><td width="96" nowrap><b>양식 R&amp;D</b></td><td>입사 8개월 만에 기초 실험 → <b>100배 규모 파일럿 실증</b> · 환경 변수 통제로 <b>육상양식 표준 방법</b> 정립</td></tr>
-<tr><td width="96" nowrap><b>원가 · 품질</b></td><td>자체 배지 개발로 <b>원가 80% 절감 가능성</b> 확인 · 수조 <b>오염 예측 프로그램</b> 구축</td></tr>
-<tr><td width="96" nowrap><b>AI 분석</b></td><td>김 <b>성장률 · 색택 이미지</b>를 머신러닝으로 분석해 사진 기반 생산량 예측 연구</td></tr>
-<tr><td width="96" nowrap><b>리더십</b></td><td>국책과제 <b>실무책임자</b>로 KPI 총괄 · Bio-AI 팀 <b>데이터 정리 프로세스</b>와 주간 미팅 운영</td></tr>
-<tr><td width="96" nowrap><b>학력</b></td><td>공주대학교 생명과학 학 · 석 · 박사 — 방사무늬김의 난균성 병원균 감염과 ROS 신호 연구 · SCI(E) 주저자 1편 · 공저자 5편 · 학회 수상 6건</td></tr>
+<tr><td width="96" nowrap><b>기간</b></td><td>2025.08 ~ 2025.12 · <b>직접 개발</b></td></tr>
+<tr><td width="96" nowrap><b>문제</b></td><td>김 길이를 자로 재면 엽체가 뜯기고, 탁도 · 수조 왜곡으로 오차가 크며, 여러 단의 배드를 사람이 다 확인할 수 없었습니다.</td></tr>
+<tr><td width="96" nowrap><b>수행</b></td><td>CVAT · Labelme 라벨링 + <b>SAM</b> 보조 · 증강 파이프라인 작성<br/><b>DeepLabV3+ (ResNet-50)</b>로 배경 · 김 · 기준 마커 3클래스 분할, 클래스 가중치 · Early stopping, 라벨 부족을 <b>Pseudo-label 준지도학습</b>으로 보완, IoU · Dice 평가<br/>기준 마커(1.5 cm) 픽셀 크기로 <b>김 길이를 cm로 자동 계산</b> · 품종 · 환경별 성장 DB → 로지스틱 · 곰페르츠 곡선 → <b>Flask 웹(Growth Predictor)</b>에서 30일 성장 곡선 표시</td></tr>
+<tr><td width="96" nowrap><b>결과</b></td><td>학습 데이터 <b>191장 → 463장</b> 확장으로 이미지 중앙 편중 문제 해소 · 길이 · 면적 자동 추출 · 관련 기술 특허 준비 · 수중 색 왜곡 복원 확산 모델(DDPM)도 실험</td></tr>
+<tr><td width="96" nowrap><b>기술</b></td><td><code>PyTorch</code> <code>DeepLabV3+</code> <code>SAM</code> <code>CVAT</code> <code>Labelme</code> <code>Flask</code></td></tr>
 </table>
 
 <div align="right"><a href="#top"><sub><b>↑ 맨 위로</b></sub></a></div>
+
+<br/>
+
+<img src="company-02.svg" width="100%" alt="LAB 02 실시간 수질 · 영상 대시보드: 센서로 10초마다 수온 · 염도 · pH · TDS 기록, 카메라 7대 영상"/>
+
+<table>
+<tr><td width="96" nowrap><b>기간</b></td><td>2025.09 ~ 2025.12 · <b>직접 개발</b></td></tr>
+<tr><td width="96" nowrap><b>문제</b></td><td>수질을 사람이 하루 몇 번 손으로 재서 기록해, 밤사이 변화나 이상 징후를 놓쳤습니다.</td></tr>
+<tr><td width="96" nowrap><b>수행</b></td><td><b>RS-485 (Modbus)</b> EC · pH 센서를 Python으로 읽어 <b>10초 간격</b> 수집 · 날짜별 로그 자동 저장<br/><b>Flask API</b>로 현재값 · 24시간 추이 · 로그 다운로드 제공 · <b>ESP32-CAM 7대</b> 실시간 영상을 한 웹 화면에 묶음</td></tr>
+<tr><td width="96" nowrap><b>결과</b></td><td>실증 기간 수질을 연속 기록해 아래 오염원 상관분석(r = 0.55)의 데이터로 사용</td></tr>
+<tr><td width="96" nowrap><b>기술</b></td><td><code>Python</code> <code>RS-485 Modbus</code> <code>Flask</code> <code>ESP32-CAM</code></td></tr>
+</table>
+
+
+#### 🧫 그 밖의 연구 성과
+
+<table>
+<tr><th width="150">과제</th><th width="130">핵심 숫자</th><th>한 일</th></tr>
+<tr><td><b>김 배양 조건 확립</b></td><td align="center"><b>4.72 mm/day</b></td><td>조건별 실험 설계 · 상대성장률(SGR) 지표 도입 · 해수 3.6톤 실증 저성장 원인 6가지 규명</td></tr>
+<tr><td><b>오염원 원인 규명</b></td><td align="center"><b>r = 0.55</b></td><td>센서 pH와 오염도 상관분석(N = 828) → pH를 오염 조기 지표로 활용</td></tr>
+<tr><td><b>배지 원가 절감</b></td><td align="center"><b>−80%</b></td><td>성분별 단가 분석으로 고가 성분 대체 · 월 배지 비용 80% 이상 절감 가능성 확인</td></tr>
+</table>
+
+<div align="right"><a href="#top"><sub><b>↑ 맨 위로</b></sub></a></div>
+
 
 <br/>
 
@@ -198,11 +223,12 @@ OpenCV Rule 검사, **YOLO11** 객체 검출, **ResNet-18** Fine-tuning을 거�
 
 | 영역 | 해 본 것 |
 | :--- | :--- |
-| **🌿 Bio Research** | 해조류(김) 배양 · 생장 · 병해 연구, 육상양식 100배 규모 실증, 자체 배지 개발 |
+| **🌿 Bio Research** | 해조류(김) 배양 · 생장 · 병해 연구, 배양 조건 실험 설계와 3.6톤 규모 실증, 배지 비용 분석 |
+| **📡 Data Pipeline** | RS-485 센서 10초 로깅, Flask API, ESP32-CAM 실시간 영상 대시보드, pH · 오염도 상관분석 |
 | **📏 Data · Evaluation** | 촬영 묶음 단위 Split, Test 1회 평가 규칙, Class별 P/R · 실패 유형(FN · FP · CLASS · BBOX) 분석 |
 | **👁️ Machine Vision** | OpenCV Rule 검사 (CLAHE · Sobel · Otsu), 자동 ROI, RETAKE 판정 |
-| **🤖 Deep Learning** | 객체 검출 (YOLO11), 이미지 분류 Fine-tuning (ResNet-18), Grad-CAM 근거 확인 |
-| **⚙️ Model Serving** | FastAPI · Redis 캐시 · Celery 비동기 작업 · PostgreSQL 기록 · Docker Compose |
+| **🤖 Deep Learning** | 이미지 분할 (DeepLabV3+) · 준지도학습, 객체 검출 (YOLO11), 분류 Fine-tuning (ResNet-18), Grad-CAM |
+| **⚙️ Model Serving** | Flask 성장 예측 웹, FastAPI · Redis 캐시 · Celery 비동기 작업 · PostgreSQL 기록 · Docker Compose |
 | **🧍 3D · Pose** | VICON 모캡 촬영 기획, 동작별 OK / NG 기준 설계 |
 | **📝 R&amp;D · Documentation** | 국책과제 제안 · KPI 관리, 라벨 기준서, 실패 분석 보고서, README |
 
@@ -231,9 +257,9 @@ OpenCV Rule 검사, **YOLO11** 객체 검출, **ResNet-18** Fine-tuning을 거�
 
 <div align="center">
 
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white) ![Hugging Face](https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black) ![YOLO11](https://img.shields.io/badge/YOLO11-111F68?style=flat-square&logo=yolo&logoColor=white) ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white) ![Celery](https://img.shields.io/badge/Celery-37814A?style=flat-square&logo=celery&logoColor=white) ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white) ![Hugging Face](https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black) ![YOLO11](https://img.shields.io/badge/YOLO11-111F68?style=flat-square&logo=yolo&logoColor=white) ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white) ![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white) ![Celery](https://img.shields.io/badge/Celery-37814A?style=flat-square&logo=celery&logoColor=white) ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 <br/>
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white) ![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white) ![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=flat-square&logo=espressif&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white) ![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
 
 <sub>AI · Vision · Serving &nbsp;&nbsp;|&nbsp;&nbsp; Language · Deploy · Collaboration</sub>
 
@@ -243,10 +269,12 @@ OpenCV Rule 검사, **YOLO11** 객체 검출, **ResNet-18** Fine-tuning을 거�
 
 | 분야 | 기술 |
 | :--- | :--- |
-| 🤖 **AI · Vision** | `PyTorch` `Hugging Face Transformers` `YOLO11 (Ultralytics)` `ResNet-18` `Grad-CAM` |
+| 🤖 **AI · Vision** | `PyTorch` `DeepLabV3+` `SAM` `Hugging Face Transformers` `YOLO11 (Ultralytics)` `ResNet-18` `Grad-CAM` |
+| 🏷️ **Labeling** | `CVAT` `Labelme` `Python GUI` |
 | 👁️ **Machine Vision** | `OpenCV` `CLAHE` `Sobel` `Otsu` `Morphology` `GrabCut` `HSV` |
-| ⚙️ **Backend · Serving** | `FastAPI` `Celery` `Redis` `PostgreSQL` |
-| 📏 **Data · Evaluation** | `mAP · P/R` `Confusion Matrix` `pHash · md5` `Excel` |
+| ⚙️ **Backend · Serving** | `FastAPI` `Flask` `Celery` `Redis` `PostgreSQL` |
+| 📡 **IoT · Sensor** | `RS-485 Modbus` `ESP32-CAM` |
+| 📏 **Data · Evaluation** | `IoU · Dice` `mAP · P/R` `Confusion Matrix` `상관분석` `pHash · md5` `Excel` |
 | 💻 **Language** | `Python` |
 | ☁️ **Deploy · Test** | `Docker` `Docker Compose` `pytest` |
 | 🧍 **3D · Pose** | `VICON` `YOLO Pose (예정)` |
