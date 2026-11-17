@@ -3,7 +3,7 @@
 
 <div align="center">
 
-<img src="assets/header.svg" width="100%" alt="박하나 Hana Park · Model Evaluation · Vision AI · Bio × AI · Seaweed Ph.D."/>
+<img src="header.svg" width="100%" alt="박하나 Hana Park · Model Evaluation · Vision AI · Bio × AI · Seaweed Ph.D."/>
 
 <br/>
 
@@ -51,7 +51,7 @@ OpenCV Rule 검사, **YOLO11** 객체 검출, **ResNet-18** Fine-tuning을 거�
 
 ## 📊 Impact at a Glance
 
-<img src="assets/impact.svg" width="100%" alt="김 육상양식 100배 규모 실증 · 조각김치 이물검출 Val mAP50-95 0.345→0.446 · 병뚜껑 검사 54%→90%, 위험 오류 0건 · 콩잎 병해 분류 Test 94.5%"/>
+<img src="impact.svg" width="100%" alt="김 육상양식 100배 규모 실증 · 조각김치 이물검출 Val mAP50-95 0.345→0.446 · 병뚜껑 검사 54%→90%, 위험 오류 0건 · 콩잎 병해 분류 Test 94.5%"/>
 
 <sub>※ 모든 수치는 실제 실행 기록값입니다. 조각김치 이물검출은 6인 팀 공동 성과이며, 저는 Split · 평가 · 실패 분석을 맡았습니다. 연구소 성과는 이력서에 공개한 범위만 적었습니다.</sub>
 
@@ -61,7 +61,7 @@ OpenCV Rule 검사, **YOLO11** 객체 검출, **ResNet-18** Fine-tuning을 거�
 
 ## 🏢 Career — R&amp;D 연구소장
 
-<img src="assets/company-01.svg" width="100%" alt="R&D 김 육상양식 공정 개발 · 이미지 기반 생장 분석: 기초 실험에서 100배 규모 파일럿까지 이끌고, 김의 성장률 · 색택을 머신러닝으로 분석했습니다."/>
+<img src="company-01.svg" width="100%" alt="R&D 김 육상양식 공정 개발 · 이미지 기반 생장 분석: 기초 실험에서 100배 규모 파일럿까지 이끌고, 김의 성장률 · 색택을 머신러닝으로 분석했습니다."/>
 
 <sub>🔒 주식회사 두번째바다 기업부설연구소 연구소장 (2025.06 ~ 2026.06). 사내 프로젝트라 코드 · 데이터는 공개하지 않습니다.</sub>
 
@@ -81,7 +81,7 @@ OpenCV Rule 검사, **YOLO11** 객체 검출, **ResNet-18** Fine-tuning을 거�
 
 <sub>KH정보교육원 [비솔] Vision AI &amp; Vertical AI 융합 전문가 과정 · 2조 Evaluation 담당 · 2026.10 ~</sub>
 
-<img src="assets/project-01.svg" width="100%" alt="01 조각김치 라벨링 프로그램: Golden Test 5가지 검사로 좌표 오차 1e-6 미만을 증명했습니다. 900장 정답 데이터 구축"/>
+<img src="project-01.svg" width="100%" alt="01 조각김치 라벨링 프로그램: Golden Test 5가지 검사로 좌표 오차 1e-6 미만을 증명했습니다. 900장 정답 데이터 구축"/>
 
 <table>
 <tr><td width="96" nowrap><b>기간</b></td><td>2026.10 · 6인 팀 · 내 역할 <b>좌표 · 검증 (Coord)</b></td></tr>
@@ -93,7 +93,7 @@ OpenCV Rule 검사, **YOLO11** 객체 검출, **ResNet-18** Fine-tuning을 거�
 
 <br/>
 
-<img src="assets/project-02.svg" width="100%" alt="02 조각김치 이물검출: 같은 촬영 묶음이 섞인 누수를 막고, Test는 한 번만 보며 YOLO 성능을 정직하게 쟀습니다."/>
+<img src="project-02.svg" width="100%" alt="02 조각김치 이물검출: 같은 촬영 묶음이 섞인 누수를 막고, Test는 한 번만 보며 YOLO 성능을 정직하게 쟀습니다."/>
 
 <table>
 <tr><td width="96" nowrap><b>기간</b></td><td>2026.10.15 ~ 10.21 · 6인 팀 · 내 역할 <b>Evaluation / Failure</b></td></tr>
@@ -108,7 +108,7 @@ OpenCV Rule 검사, **YOLO11** 객체 검출, **ResNet-18** Fine-tuning을 거�
 
 <br/>
 
-<img src="assets/project-03.svg" width="100%" alt="03 병뚜껑 유무 검사: 정확도보다 불량을 통과시키는 오류를 먼저 줄여, 새 사진 90% · 위험 오류 0건을 만들었습니다."/>
+<img src="project-03.svg" width="100%" alt="03 병뚜껑 유무 검사: 정확도보다 불량을 통과시키는 오류를 먼저 줄여, 새 사진 90% · 위험 오류 0건을 만들었습니다."/>
 
 <table>
 <tr><td width="96" nowrap><b>기간</b></td><td>2026.11.01 ~ 11.02 · 개인 · 사진 42장 (test 24 · holdout 8 · final 10)</td></tr>
@@ -122,7 +122,7 @@ OpenCV Rule 검사, **YOLO11** 객체 검출, **ResNet-18** Fine-tuning을 거�
 
 <br/>
 
-<img src="assets/project-04.svg" width="100%" alt="04 이어팁 유무 검사: 전처리 26가지 비교 후 ROI 재설계로 판정 margin 0에서 0.23"/>
+<img src="project-04.svg" width="100%" alt="04 이어팁 유무 검사: 전처리 26가지 비교 후 ROI 재설계로 판정 margin 0에서 0.23"/>
 
 <table>
 <tr><td width="96" nowrap><b>기간</b></td><td>2026.10.26 · 개인 · Mini Challenge</td></tr>
@@ -130,13 +130,13 @@ OpenCV Rule 검사, **YOLO11** 객체 검출, **ResNet-18** Fine-tuning을 거�
 <tr><td width="96" nowrap><b>기술</b></td><td><code>OpenCV</code> <code>Otsu</code> <code>ROI</code></td></tr>
 </table>
 
-<a href="https://github.com/gksk9063-ops/eartip-inspection"><img src="https://img.shields.io/badge/Repository-16323F?style=flat-square&logo=github" alt="repository"/></a>
+<a href="https://github.com/HanaPark-lab/eartip-inspection"><img src="https://img.shields.io/badge/Repository-16323F?style=flat-square&logo=github" alt="repository"/></a>
 
 <div align="right"><a href="#top"><sub><b>↑ 맨 위로</b></sub></a></div>
 
 <br/>
 
-<img src="assets/project-05.svg" width="100%" alt="05 콩잎 병해 분류 + 비동기 서빙: ResNet-18을 Fine-tuning하고, 자신 없는 판정은 보류하는 안전장치와 함께 서비스로 띄웠습니다."/>
+<img src="project-05.svg" width="100%" alt="05 콩잎 병해 분류 + 비동기 서빙: ResNet-18을 Fine-tuning하고, 자신 없는 판정은 보류하는 안전장치와 함께 서비스로 띄웠습니다."/>
 
 <table>
 <tr><td width="96" nowrap><b>기간</b></td><td>2026.11.04 ~ 11.05 · 개인</td></tr>
@@ -150,7 +150,7 @@ OpenCV Rule 검사, **YOLO11** 객체 검출, **ResNet-18** Fine-tuning을 거�
 
 <br/>
 
-<img src="assets/project-06.svg" width="100%" alt="06 바른품 돌봄 동작 코치: OK/NG 기준과 3D 모캡 촬영 계획, 172컷 촬영 콘티"/>
+<img src="project-06.svg" width="100%" alt="06 바른품 돌봄 동작 코치: OK/NG 기준과 3D 모캡 촬영 계획, 172컷 촬영 콘티"/>
 
 <table>
 <tr><td width="96" nowrap><b>기간</b></td><td>2026.11.08 ~ 진행 중 · 6인 팀 · 내 역할 <b>현장 사진 · 기획 문서</b></td></tr>
@@ -166,7 +166,7 @@ OpenCV Rule 검사, **YOLO11** 객체 검출, **ResNet-18** Fine-tuning을 거�
 
 <sub>[어디서 진행한 프로젝트인지: 예) 박사과정 연구실 / 개인 / 공모전]</sub>
 
-<img src="assets/project-07.svg" width="100%" alt="07 김 감염률 측정기"/>
+<img src="project-07.svg" width="100%" alt="07 김 감염률 측정기"/>
 
 <table>
 <tr><td width="96" nowrap><b>기간</b></td><td>[YYYY.MM ~ YYYY.MM] · [개인 / N인 팀] · 내 역할 <b>[역할]</b></td></tr>
@@ -180,7 +180,7 @@ OpenCV Rule 검사, **YOLO11** 객체 검출, **ResNet-18** Fine-tuning을 거�
 
 <br/>
 
-<img src="assets/project-08.svg" width="100%" alt="08 바다마중 앱 개발"/>
+<img src="project-08.svg" width="100%" alt="08 바다마중 앱 개발"/>
 
 <table>
 <tr><td width="96" nowrap><b>기간</b></td><td>[YYYY.MM ~ YYYY.MM] · [개인 / N인 팀] · 내 역할 <b>[역할]</b></td></tr>
@@ -247,6 +247,6 @@ OpenCV Rule 검사, **YOLO11** 객체 검출, **ResNet-18** Fine-tuning을 거�
 <div align="center">
 
 [![Email](https://img.shields.io/badge/Email-1E4E63?style=flat-square&logo=gmail&logoColor=white)](mailto:[이메일])
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/gksk9063-ops)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/HanaPark-lab)
 
 </div>
